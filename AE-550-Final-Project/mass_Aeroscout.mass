@@ -1,0 +1,17 @@
+#====================================
+# AeroScout Tiger Mass
+# Author: Tiger Sievers
+# Created: 12/10/2024
+# Last updated: 12/10/2024
+#=====================================
+# Units Definition:
+Lunit = 1.0 in
+Munit = 1.0 slug
+Tunit = 1.0 s
+
+# Constant Definition
+g = 386 !in/s^2
+rho = 0.0000013 !slug/in^3
+
+# Mass X_CG Y_CG Z_CG I_XX I_YY I_ZZ (I_XY I_XZ I_YZ)
+0.0551376056 9.52 0 6.5 0.01149 0.01622 0.02295

@@ -1,0 +1,283 @@
+#===========================================
+Aeroscout Tiger
+# AVL file crcrated by: Tiger Sievers
+# Created: 12/10/2024
+#===========================================
+
+# Mach
+0.031
+
+# iYsm iZsm Zsym (Aircraft Symmetry)
+0 0 0
+
+# Sref Cref Bref (Reference area, chord, span)
+324.38 7.51 43.25
+
+# Xref Yref Zref (Moment reference location, ie, CG Location)
+11.13 0 6.5
+
+#===========================================================================
+SURFACE
+Fuselage V
+#Nchordwise Cspace 
+20 0
+
+SCALE
+1 1 1
+
+TRANSLATE
+0 0 0
+
+NOWAKE
+
+#-----Section 1----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 0 2.318 15.876 0 10 0
+
+#-----Section 2----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 0 8.282 15.876 0 10 0
+
+#===========================================================================
+SURFACE
+Fuselage H
+#Nchordwise Cspace 
+20 0
+
+SCALE
+1 1 1
+
+TRANSLATE
+0 0 0
+
+NOWAKE
+
+#-----Section 1----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 -2.98 5.3 15.876 0 10 0
+
+#-----Section 2----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 2.98 5.3 15.876 0 10 0
+
+
+#=======================================================================
+SURFACE
+Wing
+
+# Horseshoe Vortex Distribution
+#Nchord Cspace
+10 0
+
+YDUPLICATE
+# reflect across y = 0
+0
+
+ANGLE
+# incedence angle bias for surface
+5.4
+
+SCALE
+1 1 1
+
+TRANSLATE
+# x,y,z bias for whole surface
+8.69 0 8.16
+
+
+#-----Section 1-----------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+0 0 0 8 0 8 0
+
+NACA 
+2412
+
+
+#-----Section 2 (inboard aileron)-----------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+0.272 5.99 0.251 7.72 0 10 0
+
+NACA 
+2412
+
+CONTROL 
+# Cname Cgain Xhinge HingeVec SgnDup
+aileron 1.0 0.254 0 0 0 -1.0
+
+
+#-----Section 3 (outboard aileron)-----------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+0.919 20.24 0.847 8 0 7.06 0
+
+NACA 
+2412
+
+CONTROL 
+# Cname Cgain Xhinge HingeVec SgnDup
+aileron 1.0 0.271 0 0 0 -1.0
+
+
+#-----Section 4-----------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+0.982 21.625 0.905 8 0 10 0
+
+NACA 
+2412
+
+
+#====================================================================================
+Surface
+Horizontal Tail
+#Nchord Cspace
+8 1.0
+
+YDUPLICATE
+# reflect image
+0
+
+TRANSLATE
+# x,y,z bias
+28.82 0 5.94
+
+SCALE
+1 1 1
+
+
+#-----------Inboard Section------------------------------------------------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+0 0.5 0 3 0 6 0
+
+NACA
+-2412
+
+CONTROL
+# Cname Cgain Xhinge HingeVec SgnDup
+elevator 1.0 0.999 0 0 0 1
+
+#-----------Middle Section------------------------------------------------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+0.065 1.125 0 5.06 0 6 0
+
+NACA
+-2412
+
+CONTROL
+# Cname Cgain Xhinge HingeVec SgnDup
+elevator 1.0 0.999 0 0 0 1
+
+
+#-----------Outboard Section------------------------------------------------------------------
+SECTION
+# Xle Yle Zle chord angle Nspan Sspace
+1.75 8.535 0 3.873 0 6 0
+
+NACA
+-2412
+
+CONTROL
+# Cname Cgain Xhinge HingeVec SgnDup
+elevator 1.0 0.999 0 0 0 1
+
+
+#==================================
+SURFACE
+Vertical Tail
+
+# Horseshoe Vortex Distribution
+#Nchord Cspace
+8 0
+
+ANGLE
+# incidence angle
+0
+
+SCALE
+1 1 1
+
+TRANSLATE
+28.125 0 3.94
+
+#------Section 1-----------------
+SECTION
+# Xle   Yle    Zle   chord   angle   Nspan   Sspace
+   0     0      0    6.125       0     10      0
+
+NACA
+0012
+
+CONTROL
+#Cname  Cgain  Xhinge  HingeVec  SgnDup
+rudder    1     0.368   0 0 1     ! N/A
+
+#------Section 2-----------------
+SECTION
+# Xle   Yle    Zle   chord   angle   Nspan   Sspace
+ 2.066   0    7.5    3.625     0       10      0
+
+NACA
+0012
+
+CONTROL
+#Cname  Cgain  Xhinge  HingeVec  SgnDup
+rudder    1     0.466   0 0 1     ! N/A
+
+
+#========================================================================================
+SURFACE
+Tailboom H
+#Nchordwise Cspace 
+20 0
+
+SCALE
+1 1 1
+
+TRANSLATE
+10.375 0 4.5
+
+NOWAKE
+
+#-----Section 1----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 -0.9675 0 23.38 0 10 0
+
+#-----Section 2----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 0.9675 0 23.38 0 10 0
+
+#========================================================================================
+SURFACE
+Tailboom V
+#Nchordwise Cspace 
+20 0
+
+SCALE
+1 1 1
+
+TRANSLATE
+10.375 0 4.5
+
+NOWAKE
+
+#-----Section 1----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 0 -0.9675 23.38 0 10 0
+
+#-----Section 2----------------------------------------------------------------------
+SECTION 
+#Xle Yle Zle Chord Ainc Nspanwise Sspace
+0 0 0.9675 23.38 0 10 0
+
+

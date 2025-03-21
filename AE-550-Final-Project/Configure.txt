@@ -1,0 +1,11 @@
+load \Users\t692s578\OneDrive - University of Kansas\550 Project\AVL Model\aeroscout_avl_v12.avl
+mass \Users\t692s578\OneDrive - University of Kansas\550 Project\AVL Model\mass_Aeroscout.mass
+mset 0
+oper
+c1
+v 480
+
+d1 rm 0
+d2 pm 0
+d3 ym 0
+x
